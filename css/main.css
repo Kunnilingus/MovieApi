@@ -1,0 +1,146 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@400;500;700&display=swap");
+@import "./loader.css";
+
+body {
+  font-family: "Poltawski Nowy", serif;
+
+  background-color: black;
+  color: #fff;
+
+  background-image: url(./../img/bg.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0px;
+}
+.none {
+  display: none !important;
+}
+
+.container-left {
+  padding: 25px 15px 100px;
+  width: 930px;
+  border-right: 1px solid #162344;
+  min-height: 100vh;
+}
+
+.container-right {
+  position: fixed;
+  left: 930px;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #162344;
+  background-color: rgba(5, 56, 185, 0.2);
+  width: 800px;
+  padding: 25px;
+}
+
+.title-1 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.films {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  margin-bottom: 30px;
+}
+
+.card {
+  padding-bottom: 15px;
+  width: 200px;
+  border-radius: 6px;
+  background-color: rgb(22, 22, 22);
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s ease-in, background-color 0.2s ease-in,
+    box-shadow 0.2s ease-in;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background-color: rgb(35, 35, 35);
+  box-shadow: 0px 10px 20px #00419873;
+}
+
+.card__img {
+  margin-bottom: 15px;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card__title {
+  padding: 0 5px;
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.card__year {
+  margin-bottom: 5px;
+  color: rgb(7, 150, 252);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.card__rate {
+  font-size: 14px;
+  color: rgb(240, 246, 75);
+}
+
+.show-more {
+  display: block;
+  border-radius: 6px;
+  background-color: rgb(16, 85, 205);
+  color: #fff;
+  padding: 10px 30px;
+  transition: opacity 0.2d ease-in;
+  margin: 0 auto;
+}
+
+.show-more:hover {
+  opacity: 0.8;
+}
+
+.loader-wrapper {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+}
+.film {
+  display: grid;
+  grid-template-areas: "title title" "photo desc";
+  gap: 30px;
+}
+.film__title {
+  grid-area: title;
+  font-size: 28px;
+  font-weight: 300;
+}
+.film__img {
+  grid-area: photo;
+}
+.film__desc {
+  grid-area: desc;
+}
+.film__details {
+  color: aqua;
+}
+.film__text {
+  margin-top: 30px;
+  font-weight: 300;
+}
